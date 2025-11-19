@@ -9,13 +9,15 @@
 <body>
 
 <div class="login-page">
+    <h3 class="titulo">Bem Vindo ao Financial Project</h3>
     <div class="form">
+        <img th:src="@{/img/Logo.png}" alt="Logo" class="login-logo">
         <form class="login-form">
             <input type="text" placeholder="username" id="username" name="username"/>
             <input type="password" placeholder="password" id="password" name="password"/>
             <button>login</button>
 
-          <!--  <p class="message"><a th:href="/">Cadastre sua conta</a></p>-->
+            <p class="message"><a th:href="@{/CadastroUsuario}">Cadastre sua conta</a></p>
         </form>
     </div>
 </div>
