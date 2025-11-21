@@ -12,14 +12,15 @@
     <h3 class="titulo">Cadastro</h3>
     <div class="form">
         <img th:src="@{/img/Logo.png}" alt="Logo" class="login-logo">
-        <form class="login-form">
-            <input type="text" placeholder="Nome" id="Nome" name="Nome"/>
-            <input type="text" placeholder="Sobrenome" id="Sobrenome" name="Sobrenome"/>
-            <input type="text" placeholder="Email" id="Email" name="Email"/>
-            <input type="text" placeholder="CPF" id="CPF" name="CPF"/>
-            <input type="text" placeholder="Data de Nascimento" id="Nascimento" name="Nascimento"/>
-            <input type="password" placeholder="Senha" id="senha" name="senha"/>
-            <button>Cadastrar</button>
+        <form class="login-form" th:action="@{/user/save}" method="POST" th:object="${usuario}">
+            <input type="text" placeholder="nome" id="nome" name="nome" th:field="*{nome}"/>
+            <input type="text" placeholder="sobrenome" id="sobrenome" name="sobrenome" th:field="*{sobrenome}"/>
+            <input type="text" placeholder="email" id="email" name="email" th:field="*{email}"/>
+            <input type="text" placeholder="cpf" id="cpf" name="cpf" th:field="*{cpf}"/>
+            <input type="date" placeholder="dataNascimento" id="dataNascimento" name="dataNascimento" th:field="*{dataNascimento}"/>
+            <input type="password" placeholder="login" id="login" name="login" th:field="*{login}"/>
+            <input type="password" placeholder="senha" id="senha" name="senha" th:field="*{senha}"/>
+            <button type="submit">Cadastrar</button>
             <p class="message"><a th:href="@{/Login}">Voltar</a></p>
         </form>
     </div>
