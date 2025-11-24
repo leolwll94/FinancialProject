@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #262626;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+
+}
+.header-container {
+    display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       gap: 12px;
+       padding: 10px 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-financial{
+    width: 42px;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+Section {
+    flex: 1;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    background: #262626;
+    color: white;
+}
+
+
+

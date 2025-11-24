@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" layout:decorate="~{Template.html}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Login.css">
 </head>
 <body>
-
+<section layout:fragment="body">
 <div class="login-page">
     <h3 class="titulo">Bem Vindo ao Financial Project</h3>
     <div class="form">
@@ -22,6 +22,6 @@
     </div>
 </div>
 
-
+</section>
 </body>
 </html>
