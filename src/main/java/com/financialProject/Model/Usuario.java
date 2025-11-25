@@ -7,6 +7,7 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -39,7 +40,9 @@ public class Usuario {
     @Column(nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
+    @Column(nullable = true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataUltimoAcesso;
+
 
 }
