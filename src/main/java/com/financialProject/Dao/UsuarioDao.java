@@ -9,4 +9,5 @@ public interface UsuarioDao extends JpaRepository<Usuario,Integer> {
     public Usuario findByLoginAndSenha(String login, String senha);
 
 
+    Usuario findByLogin(String username);
 }

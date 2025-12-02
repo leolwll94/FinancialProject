@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title layout:title-pattern="$LAYOUT_TITLE $CONTENT_TITLE"></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
@@ -13,10 +14,12 @@
         <div class="logo">Financial Project</div>
     </div>
         <nav>
-            <a th:href="@{/}">Dashboard</a>
-            <a th:href="@{/}">Transações</a>
-            <a th:href="@{/}">Relatórios</a>
-            <a th:href="@{/}">Sair</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/}">Dashboard</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/}">Transações</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/}">Relatórios</a>
+            <a th:href="@{/}">Ajuda</a>
+            <a th:href="@{/}">Contato</a>
+            <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Sair</a>
         </nav>
 
 </header>
